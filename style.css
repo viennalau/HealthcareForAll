@@ -1,0 +1,151 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* start of nav bar*/
+
+.nav:link{
+  color: #5257ec;
+  text-decoration: none;
+}
+
+.nav:visited{
+  color: #272b9f;
+}
+
+.nav:hover{
+  color: #8a8eff;
+}
+
+.navbar{
+  display: flex;
+  flex-direction:row;
+  background-color:#000000;
+  height: 15%; 
+  width:100%;
+}
+
+.title {
+  border: 1px;
+  border-radius:1px;
+  padding-left: 15px;
+  background-color:#000000;
+  font-family: "Oswald", sans-serif;
+  font-size:32px;
+}
+
+.navButton:hover {
+  color:#fefae0;
+  background-color:#000000;
+  cursor: pointer;
+}
+
+.navButtons {
+  font-size: 20px;
+  background-color:#000000;
+  border:none;
+  margin-top: 30px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Oswald", sans-serif;
+}
+
+.heartRate, .chatbot{
+  font-size: 20px;
+  color: #fefae0;
+  background-color:#000000;
+  border:none;
+  padding-left: 15px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Oswald", sans-serif;
+}
+
+/*end of nav bar*/
+
+.StartBtn{
+  font-size: 20px;
+  color: #fefae0;
+  background-color:#000000;
+  border:none;
+  padding:10px;
+  margin:auto;
+  display:flex;
+  justify-content: center;
+  
+}
+
+.StartBtn:hover{
+   background-color:#393737;
+}
+
+.hrTitle{
+  display:flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+}
+
+.subHeading1{
+  font-size: 27px;
+  font-weight: 200;
+  font-family: "Oswald", sans-serif;
+}
+
+.subHeading2{
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  font-family: "Oswald", sans-serif;
+}
+
+.text{
+  display:flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+.quizBtns{
+  font-size: 20px;
+  color: #fefae0;
+  background-color:#000000;
+  border:none;
+  padding:10px;
+  margin:5px;
+  
+}
+
+.quizBtns:hover{
+   background-color:#393737;
+}
+
+label{
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+ 
+}
+
+ol p {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+ol {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+ul p {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+ul {
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}

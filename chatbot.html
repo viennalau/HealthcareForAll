@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Oswald:wght@300&display=swap"
+    rel="stylesheet">
+</head>
+
+<div1 class="navbar">
+  <h1 class="title"> <a href="/index.html" class="nav"> AI Health Assistant </a></h1>
+  <div class="navButtons">
+    <button class="heartRate"> <a href="/heartrate.html" class="nav">Heart Rate Classifier </a> </button>
+    <button class="chatbot"> <a href="/chatbot.html" class="nav"> Health Quiz </a> </button>
+  </div>
+</div1>
+
+<!-- sore throat, runny nose, stuffy nose, fever, nausea, vomiting, diarrhea, shortness of breath, difficulty breathing, loss of taste, loss of smell, itchy nose, itchy eyes, itchy mouth, itchy inner ear, sneezing, and pink eye 
+-->
+
+<body>
+  <p class="hrTitle"> Welcome to the Health Quiz portion of our AI Health Assistant!</p>
+  <p class="subHeading1">
+    If you feel sick, you can use our health quiz with 20 different symptoms as a way to diagnose your sickness! This
+    quiz support four different sicknesses: COVID-19, the flu, the common cold, and allergies. We have plans to
+    implement suggestions to treat your predicted sickness, but for now, our quiz serves as a simple diagnosis.
+  <p class="subHeading2">How does this quiz work, anyway?
+  <ol type="1">
+    <li>We will ask you a series of questions about your symptoms. If you have the symptom listed, then check the box!
+      Otherwise, you can leave the box unchecked.</li>
+    <li>After you have answered all of the questions, click the submit button to see your results!</li>
+    <li>When you click the submit button, your results get compiled into a JSON file. We configured a web server by
+      using Flask, a python library, which hosts our trained AI model.
+      <ul>
+        <li>We trained our AI model by using a dataset from Kaggle. Our code to train the AI model, along with the data
+          that we used, can be found at this link:</li>
+        <li> <a href="https://colab.research.google.com/drive/1z49YfcdGfKnxiOFgsuacGlldXzfLR2iN?usp=sharingt"
+            class="nav"> AI Health Quiz Code </a></li>
+      </ul>
+    <li>The web server will then process the JSON file, which contains binary values based on the checkmark's value,
+      unchecked being a 0 and checked being a 1. These binary values match the values that were used in the spreadsheet
+      of symptom and sickness correlation data.</li>
+    <li>Once the web server processes the request, the web page will display your predicted sickness!</li>
+    <ul>
+      <li>We would love to add an accuracy/confidence metric to this prediction, however the library that we used
+        doesn't support that type of metric.</li>
+    </ul>
+  </ol>
+  <p class="subHeading2">
+    *Please note that this quiz does not replace a professional doctor, and you should consult your care provider with
+    any questions or concerns that you may have.*
+
+  <div class="form" <form id="symptom-form">
+    <input type="checkbox" id="1" name="Cough" value="cough">
+    <label for="1">1. Cough</label><br>
+
+    <input type="checkbox" id="2" name="Muscleache" value="muscleache">
+    <label for="2">2. Muscle Ache</label><br>
+
+    <input type="checkbox" id="3" name="Tiredness" value="tiredness">
+    <label for="3">3. Tiredness</label><br>
+
+    <input type="checkbox" id="4" name="SoreThroat" value="soreThroat">
+    <label for="4">4. Sore Throat</label><br>
+
+    <input type="checkbox" id="5" name="RunnyNose" value="runnyNose">
+    <label for="5">5. Runny Nose</label><br>
+
+    <input type="checkbox" id="6" name="StuffyNose" value="stuffyNose">
+    <label for="6">6. Stuffy Nose</label><br>
+
+    <input type="checkbox" id="7" name="Fever" value="fever">
+    <label for="7">7. Fever</label><br>
+
+    <input type="checkbox" id="8" name="Nausea" value="nausea">
+    <label for="8">8. Nausea</label><br>
+
+    <input type="checkbox" id="9" name="Vomiting" value="vomiting">
+    <label for="9">9. Vomiting</label><br>
+
+    <input type="checkbox" id="10" name="Diarrhea" value="diarrhea">
+    <label for="10">10. Diarrhea</label><br>
+
+    <input type="checkbox" id="11" name="ShortnessOfBreath" value="shortnessOfBreath">
+    <label for="11">11. Shortness of Breath</label><br>
+
+    <input type="checkbox" id="12" name="DifficultyBreathing" value="difficultyBreathing">
+    <label for="12">12. Difficulty Breathing</label><br>
+
+    <input type="checkbox" id="13" name="LossOfTaste" value="lossOfTaste">
+    <label for="13">13. Loss of Taste</label><br>
+
+    <input type="checkbox" id="14" name="LossOfSmell" value="lossOfSmell">
+    <label for="14">14. Loss of Smell</label><br>
+
+    <input type="checkbox" id="15" name="ItchyNose" value="itchyNose">
+    <label for="15">15. Itchy Nose</label><br>
+
+    <input type="checkbox" id="16" name="ItchyEyes" value="itchyEyes">
+    <label for="16">16. Itchy Eyes</label><br>
+
+    <input type="checkbox" id="17" name="ItchyMouth" value="itchyMouth">
+    <label for="17">17. Itchy Mouth</label><br>
+
+    <input type="checkbox" id="18" name="ItchyInnerEar" value="itchyInnerEar">
+    <label for="18">18. Itchy Inner Ear</label><br>
+
+    <input type="checkbox" id="19" name="Sneezing" value="sneezing">
+    <label for="19">19. Sneezing</label><br>
+
+    <input type="checkbox" id="20" name="PinkEye" value="pinkEye">
+    <label for="20">20. Pink Eye</label><br></label><br>
+
+    <button onclick="symptomCheck()">Predict</button>
+
+    <div id="prediction-result"></div>
+
+
+    <script src="script.js"></script>
+    </form>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>
