@@ -1,5 +1,5 @@
 # Healthcare For All
-A project worked on during/after the STEM Pathways x TISP Biology and Machine Learning hackathon. I collaborated in a team of two with Leen Attia. 
+A project worked on during/after the STEM Pathways x TISP Biology and Machine Learning hackathon. I collaborated in a team of two with Leen Attia. Started August 2023 and revisited in November 2023 for completion.
 
 Leen worked on the Heart Rhythm Classifier part of the website, using the Teachable Machine with Google platform. She utilized a training set from Kaggle which contained audio files of various heartbeats. She also created the website as a whole, utilizing HTML and CSS.
 
